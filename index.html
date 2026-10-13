@@ -3,13 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nazeli Zurna</title>
   <meta name="description" content="Nazeli Zurna — creative technologist from Armenia exploring the intersection of design, code, and ideas that deserve to exist.">
   <meta name="theme-color" content="#080808">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- Tech stack + contributions (self-contained; safe to move into style.css) ---- */
+    .stack-icons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .stack-icons img { width: 48px; height: 48px; border-radius: 12px; display: block; transition: transform .2s ease; }
+    .stack-icons img:hover { transform: translateY(-3px); }
+
+    .contrib { margin-top: 24px; }
+    .contrib-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .contrib-total { font-size: 1.05rem; font-weight: 500; }
+    .contrib-head a { font-size: .85rem; opacity: .7; }
+    .contrib-card { border: 1px solid rgba(128,128,128,.25); border-radius: 12px; padding: 16px; overflow-x: auto; }
+    .contrib-inner { min-width: 680px; --cell: 11px; --gap: 3px; --c0: rgba(128,128,128,.14); --c1: #0e4429; --c2: #006d32; --c3: #26a641; --c4: #39d353; }
+    :root[data-theme="light"] .contrib-inner { --c0: rgba(0,0,0,.07); --c1: #9be9a8; --c2: #40c463; --c3: #30a14e; --c4: #216e39; }
+    .contrib-months, .contrib-grid { display: grid; grid-auto-columns: var(--cell); column-gap: var(--gap); }
+    .contrib-months { grid-auto-flow: column; height: 16px; font-size: .7rem; opacity: .7; margin-bottom: 4px; }
+    .contrib-months span { white-space: nowrap; }
+    .contrib-grid { grid-auto-flow: column; grid-template-rows: repeat(7, var(--cell)); row-gap: var(--gap); }
+    .contrib-grid i { width: var(--cell); height: var(--cell); border-radius: 3px; background: var(--c0); display: block; }
+    .contrib-grid i[data-l="1"] { background: var(--c1); }
+    .contrib-grid i[data-l="2"] { background: var(--c2); }
+    .contrib-grid i[data-l="3"] { background: var(--c3); }
+    .contrib-grid i[data-l="4"] { background: var(--c4); }
+    .contrib-legend { display: flex; justify-content: flex-end; align-items: center; gap: 4px; margin-top: 10px; font-size: .72rem; opacity: .75; }
+    .contrib-legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; background: var(--c0); }
+    .contrib-legend i[data-l="1"] { background: var(--c1); } .contrib-legend i[data-l="2"] { background: var(--c2); }
+    .contrib-legend i[data-l="3"] { background: var(--c3); } .contrib-legend i[data-l="4"] { background: var(--c4); }
+    .contrib-fallback { max-width: 100%; display: block; }
+  </style>
 </head>
 <body>
   <div class="site-shell">
@@ -38,7 +65,7 @@
           <div class="stack-row">
             <span class="stack-label">Exploring</span>
             <span class="pill"><i class="dot violet"></i>Creative coding</span>
-            <span class="pill"><i class="dot blue"></i>Generative AI</span>
+            <span class="pill"><i class="dot blue"></i>Algorithmic generation</span>
             <span class="pill"><i class="dot orange"></i>Digital experiences</span>
           </div>
           <div class="stack-row">
@@ -58,6 +85,42 @@
         <p>Curious about people, places, patterns, and possibilities. I like building things, exploring data, and following ideas to see where they lead — turning curiosity into useful tools, playful experiments, and digital experiences with a point of view.</p>
         <p>Still learning, still figuring things out, and having fun along the way.</p>
         <p>This site is a home for the things I make, the ideas I’m exploring, and the projects I want to bring into the world. Take a look at my <a href="#projects">projects below</a>, or find me around the internet.</p>
+      </section>
+
+      <div class="rule"><span></span></div>
+
+      <section id="stack">
+        <p class="eyebrow">TOOLS I USE</p>
+        <h2>Tech stack</h2>
+        <div class="stack-icons">
+          <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" title="TypeScript" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=go" alt="Go" title="Go" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=html" alt="HTML5" title="HTML5" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=css" alt="CSS3" title="CSS3" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" title="Next.js" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" title="Tailwind CSS" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase" title="Supabase" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="MySQL" width="48" height="48" loading="lazy">
+          <img src="https://skillicons.dev/icons?i=nestjs" alt="NestJS" title="NestJS" width="48" height="48" loading="lazy">
+        </div>
+
+        <div class="contrib" id="contrib">
+          <div class="contrib-head">
+            <span class="contrib-total" id="contribTotal">Contributions in the last year</span>
+            <a href="https://github.com/nazelizurna" target="_blank" rel="noopener">@nazelizurna on GitHub ↗</a>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-inner" id="contribInner">
+              <img class="contrib-fallback" src="https://ghchart.rshah.org/39d353/nazelizurna" alt="GitHub contribution graph for nazelizurna" loading="lazy">
+            </div>
+            <div class="contrib-legend" aria-hidden="true">
+              Less <i data-l="0"></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i> More
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="rule"><span></span></div>
@@ -121,5 +184,68 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    /* GitHub contributions graph: live data from a public mirror of GitHub's calendar.
+       Falls back to the static chart image already in the page if the request fails. */
+    (function () {
+      var USER = 'nazelizurna';
+      var inner = document.getElementById('contribInner');
+      var totalEl = document.getElementById('contribTotal');
+      if (!inner || !window.fetch) return;
+
+      fetch('https://github-contributions-api.jogruber.de/v4/' + USER + '?y=last')
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (data) {
+          var days = data.contributions;
+          if (!days || !days.length) throw new Error('empty');
+
+          var total = days.reduce(function (s, d) { return s + d.count; }, 0);
+          totalEl.textContent = total.toLocaleString() + ' contributions in the last year';
+
+          var first = new Date(days[0].date + 'T00:00:00');
+          var offset = first.getDay(); // Sunday = 0 → grid starts on Sunday like GitHub
+          var weeks = Math.ceil((days.length + offset) / 7);
+
+          var months = document.createElement('div');
+          months.className = 'contrib-months';
+          months.style.gridTemplateColumns = 'repeat(' + weeks + ', var(--cell))';
+
+          var grid = document.createElement('div');
+          grid.className = 'contrib-grid';
+
+          for (var i = 0; i < offset; i++) {
+            var pad = document.createElement('i');
+            pad.style.visibility = 'hidden';
+            grid.appendChild(pad);
+          }
+
+          var lastMonth = -1, lastLabelWeek = -10;
+          days.forEach(function (d, idx) {
+            var cell = document.createElement('i');
+            cell.dataset.l = d.level;
+            cell.title = d.count + ' contribution' + (d.count === 1 ? '' : 's') + ' on ' + d.date;
+            grid.appendChild(cell);
+
+            var dt = new Date(d.date + 'T00:00:00');
+            var week = Math.floor((idx + offset) / 7);
+            if (dt.getMonth() !== lastMonth && dt.getDay() <= 6) {
+              if (week - lastLabelWeek >= 3) {
+                var label = document.createElement('span');
+                label.textContent = dt.toLocaleString('en', { month: 'short' });
+                label.style.gridColumn = (week + 1) + ' / span 3';
+                months.appendChild(label);
+                lastLabelWeek = week;
+              }
+              lastMonth = dt.getMonth();
+            }
+          });
+
+          inner.innerHTML = '';
+          inner.appendChild(months);
+          inner.appendChild(grid);
+        })
+        .catch(function () { /* keep fallback image */ });
+    })();
+  </script>
 </body>
 </html>
