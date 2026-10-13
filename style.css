@@ -88,7 +88,7 @@ body.light .monogram { color: var(--fg); }
   .topbar { min-height: 76px; }
   .nav { gap: 14px; }
   .nav > a:not(.icon-link) { font-size: 12px; }
-  .nav .icon-link:first-of-type { display: none; }
+  .nav .hide-mobile { display: none; }
   main { margin-top: 25px; }
   .intro h1 { margin-bottom: 19px; }
   .lead { font-size: 15px; }
